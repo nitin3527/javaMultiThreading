@@ -16,8 +16,8 @@ class SynchronizeBlock {
      }
 }
 class CreateThread1 implements Runnable {
-    Synchronize s1;
-    CreateThread1(Synchronize s1){
+    SynchronizeBlock s1;
+    CreateThread1(SynchronizeBlock s1){
         this.s1 = s1;
     }
     @Override
@@ -26,8 +26,8 @@ class CreateThread1 implements Runnable {
     }
 }
 class CreateThread3 implements Runnable {
-    Synchronize s1;
-    CreateThread3(Synchronize s1){
+    SynchronizeBlock s1;
+    CreateThread3(SynchronizeBlock s1){
         this.s1 = s1;
     }
     @Override
@@ -37,7 +37,7 @@ class CreateThread3 implements Runnable {
 }
 public class Q11 {
     public static void main(String[] args) {
-        Synchronize sy = new Synchronize();
+        SynchronizeBlock sy = new SynchronizeBlock();
         CreateThread1 ct = new CreateThread1(sy);
         CreateThread3 ct2 = new CreateThread3(sy);
         Thread t1 = new Thread(ct);

@@ -23,7 +23,7 @@ class RunFunction {
 public class Q14 {
     public static void main(String[] args) {
         RunFunction rd = new RunFunction();
-        Thread t1 = new Thread(new RunThread(){
+        Thread t1 = new Thread(new Runnable(){
 
             @Override
             public void run(){
@@ -35,7 +35,7 @@ public class Q14 {
             }
         });
 
-        Thread t2 = new Thread(new RunThread(){
+        Thread t2 = new Thread(new Runnable(){
 
             @Override
             public void run(){

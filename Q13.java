@@ -18,13 +18,11 @@ class RunFunctions {
             notify();
         }
     }
-
 }
 public class Q13 {
     public static void main(String[] args)throws InterruptedException {
         RunFunctions rd = new RunFunctions();
-        Thread t1 = new Thread(new RunThread(){
-
+            Thread t1 = new Thread(new Runnable(){
             @Override
             public void run(){
                try{
